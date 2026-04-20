@@ -31,9 +31,31 @@ public class Sponge {
     assertEqual(6, spongeCase("e"), "e");
   }
 
+  //take the input and split(" ") it into a string array
+  //make it all lowercase
+  //make a variable to hold the return statement
+  //for each item in the string array turn it into a character array
+    //declare and clear the string varriable
+    //then make boolean for upper or lowercase, set it to true, which means lowercase
+    //for each character in the character array
+      //if lowercase is true
+        //set lowercase to false
+        //Character.toLowerCase()
+        //+= to string varraible
+      //if lowercase is false
+        //set lowercase to true
+        //character.toUpperCase()
+        //+= to string varraible
+    //add the space and add the string variable to the return variable
+
+
+
+      
+
+
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    return null;
+    
   }
 
 
