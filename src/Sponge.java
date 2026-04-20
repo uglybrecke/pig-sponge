@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Sponge {
 
   /*
@@ -55,7 +57,32 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    
+    sentence = sentence.toLowerCase(null);
+
+    String[] sentArray = sentence.split(" ");
+    String returnSponge = "";
+    ArrayList<Character> wordArray = new ArrayList<>();
+    boolean isLowerCase = true;
+
+    for (String word : sentArray) {
+      isLowerCase = true;
+      for (char letter : word.toCharArray()) {
+        if (isLowerCase) {
+          wordArray.add(letter);
+          isLowerCase = false;
+        } else {
+          letter = Character.toUpperCase(letter); //this i had to look up, the difference in interaction between prim or String the method working different
+          wordArray.add(letter);
+          isLowerCase = true;
+        }
+      }
+      for (char let : wordArray) {
+        returnSponge += let;
+      }
+      returnSponge += " ";
+      wordArray.clear();
+    }
+    return returnSponge;
   }
 
 
